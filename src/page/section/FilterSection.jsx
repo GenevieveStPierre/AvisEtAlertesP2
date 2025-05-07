@@ -1,6 +1,6 @@
 import Dropdown from "../../components/Dropdown";
 import { arrondisements } from "../../components/data/arrondissement.js";
-import { sujet } from "../../components/data/Sujet";
+import { sujet } from "../../components/data/sujet.js";
 import DateFilter from "../../components/DateFilter.jsx";
 
 function FilterSection({
