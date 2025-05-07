@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Couleurs -->
+    <meta name="theme-color" content="#B22222" />
+
+
+  <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Avis et Alertes" />
+
+  <!-- Manifest et icones -->
+  <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+
+    <title>Avis et Alertes</title>
+
+    <script type="module" crossorigin src="/assets/index-DTclGUF-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DgDIvHf8.css">
+  </head>
+  <body>
+    <div id="root"></div>
+      <!-- Script principal -->
+
+    <!-- Script Service-Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('SW enregistré :', reg.scope))
+            .catch(err => console.error('Erreur SW :', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+
